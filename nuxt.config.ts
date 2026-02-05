@@ -4,6 +4,12 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: [
     '@pinia/nuxt',
-    '@nuxtjs/tailwindcss'
-  ]
+    '@nuxtjs/tailwindcss',
+    '@nuxtjs/supabase',
+  ],
+  // 新增 Supabase 的設定區塊
+  supabase: {
+    // 先關閉自動轉址，讓我們手動控制登入時機
+    redirect: false
+  }
 })
